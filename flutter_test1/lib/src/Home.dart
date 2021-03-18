@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Drawer.dart';
+
 class Home extends StatefulWidget{
   Home({Key key}) : super(key: key);
 
@@ -29,46 +31,7 @@ class _Home extends State<Home> {
           }
         ),
       ),
-      drawer:Drawer(
-
-        child: ListView(
-          children:<Widget> [
-              Row(
-                children: [
-                  Image.asset('assets/teamwork.png',width: 150),
-                   Container(
-                     child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text('Username',style: TextStyle( fontSize: 16),),
-                          ),
-                          Text('Fullname',style: TextStyle( fontSize: 16),),
-                        ],
-                      ),
-                   ),
-                ],
-              ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Center(
-                child: Text('email@email.com',style:TextStyle(fontSize: 18)),
-              ),
-            ),
-            Center(
-              child: Text('0987654321',style:TextStyle(fontSize: 18)),
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: Text('Đăng xuất',style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),),
-              onTap: (){Navigator.pushNamed(context,'/login');},
-            ),
-          ],
-        ),
-      )
+      drawer: DrawerScreen(),
     );
   }
 
