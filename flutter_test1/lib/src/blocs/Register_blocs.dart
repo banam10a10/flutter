@@ -27,6 +27,12 @@ class RegisterBloc {
     }
     _userController.sink.add('Ok');
 
+    if(!Validations.ktdb(user)){
+      _userController.sink.addError('không kí tự đặc biệt');
+      return false;
+    }
+    _userController.sink.add('ok');
+
     if (!Validations.numOfKey(user)) {
       _userController.sink.addError('tài khoản cần ít nhất 5 ký tự');
       return false;
@@ -39,6 +45,12 @@ class RegisterBloc {
       return false;
     }
     _passController.sink.add('Ok');
+
+    if(!Validations.ktdb(pass)){
+      _passController.sink.addError('không kí tự đặc biệt');
+      return false;
+    }
+    _passController.sink.add('ok');
 
     if (!Validations.numOfKey(pass)) {
       _passController.sink.addError('Mật khẩu tối thiểu là 5 ký tự');

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test1/src/UI/TestBloc.dart';
+import 'package:flutter_test1/src/UI/TestBloc2.dart';
 
 class DrawerScreen extends StatelessWidget {
   @override
@@ -61,6 +63,32 @@ class DrawerScreen extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pushNamed(context, '/login');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text(
+              'Test Bloc',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TestBloc()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text(
+              'Bloc2',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Bloc2()));
             },
           ),
         ],
