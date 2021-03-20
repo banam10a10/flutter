@@ -50,7 +50,7 @@ class RegisterBloc {
       _passController.sink.addError('không kí tự đặc biệt');
       return false;
     }
-    _passController.sink.add('ok');
+    _passController .sink.add('ok');
 
     if (!Validations.numOfKey(pass)) {
       _passController.sink.addError('Mật khẩu tối thiểu là 5 ký tự');
