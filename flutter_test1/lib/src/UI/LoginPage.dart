@@ -58,6 +58,12 @@ class _LoginPage extends State<LoginPage> {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderSide:
+                                  BorderSide(color: Colors.black, width: 1),
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide:
                                       BorderSide(color: Colors.black, width: 1),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
@@ -85,6 +91,11 @@ class _LoginPage extends State<LoginPage> {
                                 obscureText: Pass,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.black, width: 1),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Colors.black, width: 1),
                                       borderRadius: BorderRadius.all(

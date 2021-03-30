@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test1/src/UI/Day_off.dart';
 import 'package:flutter_test1/src/UI/TestBloc.dart';
-import 'package:flutter_test1/src/UI/TestBloc2.dart';
 
 class DrawerScreen extends StatelessWidget {
   @override
@@ -53,6 +53,19 @@ class DrawerScreen extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(Icons.offline_pin_outlined),
+            title: Text(
+              'Quản lý nghỉ phép',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => day_off()));
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.logout),
             title: Text(
               'Đăng xuất',
@@ -76,19 +89,6 @@ class DrawerScreen extends StatelessWidget {
             ),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => TestBloc()));
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.logout),
-            title: Text(
-              'Bloc2',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Bloc2()));
             },
           ),
         ],
